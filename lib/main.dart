@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -16,7 +17,92 @@ class MainApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
             //to bring widgets to user visible areas
-            child: Row(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 60,
+              //backgroundColor: Colors.red,
+              backgroundImage: AssetImage("lib/images/linkedin_dp1.jpg"),
+            ),
+            SizedBox(height: 10,),
+            Text(
+              "Harsh Kumar Singh",
+              style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                  //fontWeight: FontWeight.bold,
+                  fontFamily: "Pacifico"),
+            ),
+            Text(
+              "App Developer",
+              style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.teal[100],
+                  //fontWeight: FontWeight.bold,
+                  fontFamily: "Source Code Pro",
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 20,
+            width: 150,
+            child: Divider(//to add 1 pixel line
+              color: Colors.teal.shade100,
+            ),),
+            Container(
+              //color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(6.0),
+                  child: ListTile(
+                    leading: Icon(
+                        CupertinoIcons.phone_fill,
+                        size: 25,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                        "+91-8210128807",
+                        style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: "Source Sans 3",
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                  )
+                ),
+              ),
+            ),
+            Container(
+              //color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              child: Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(6.0),
+                  child: ListTile(
+                    leading: Icon(
+                        CupertinoIcons.mail_solid,
+                        size: 25,
+                        color: Colors.teal,
+                      ),
+                      title: Text(
+                        "hks1710harsh@gmail.com",
+                        style: TextStyle(
+                          color: Colors.teal.shade900,
+                          fontFamily: "Source Sans 3",
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                  )
+                ),
+              ),
+            )
+          ],
+        )
+
+            /*Row(
           //similar to row
           //limits its width to child's width
           //mainAxisSize: MainAxisSize.min,//takes same size as children, no extra space is taken
@@ -62,7 +148,8 @@ class MainApp extends StatelessWidget {
             ),
             //Container(width: double.infinity,)//alternate to stretch column width
           ],
-        )),
+        )*/
+            ),
       ),
     );
   }

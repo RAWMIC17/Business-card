@@ -7,6 +7,7 @@ environment:
   sdk: '>=3.2.6 <4.0.0'
 
 dependencies:
+  cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
   velocity_x: ^4.1.2
@@ -14,7 +15,18 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - lib/images/
+  
+  fonts:
+      - family: Pacifico
+        fonts:
+          - asset: lib/fonts/Pacifico-Regular.ttf
+      - family: Source Sans 3
+        fonts:
+          - asset: lib/fonts/SourceSans3-Regular.ttf
