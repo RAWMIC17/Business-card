@@ -18,14 +18,16 @@ class MainApp extends StatelessWidget {
         body: SafeArea(
             //to bring widgets to user visible areas
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
               radius: 60,
               //backgroundColor: Colors.red,
               backgroundImage: AssetImage("lib/images/linkedin_dp1.jpg"),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               "Harsh Kumar Singh",
               style: TextStyle(
@@ -44,19 +46,22 @@ class MainApp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 20,
-            width: 150,
-            child: Divider(//to add 1 pixel line
-              color: Colors.teal.shade100,
-            ),),
+            SizedBox(
+              height: 20,
+              width: 150,
+              child: Divider(
+                //to add 1 pixel line
+                color: Colors.teal.shade100,
+              ),
+            ),
             Container(
               //color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              margin: EdgeInsets.symmetric(vertical: 12, horizontal: 22),
               child: Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(6.0),
-                  child: ListTile(
-                    leading: Icon(
+                    padding: const EdgeInsets.all(0.0),
+                    child: ListTile(
+                      leading: Icon(
                         CupertinoIcons.phone_fill,
                         size: 25,
                         color: Colors.teal,
@@ -70,18 +75,17 @@ class MainApp extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                  )
-                ),
+                    )),
               ),
             ),
             Container(
               //color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+              margin: EdgeInsets.symmetric(vertical: 12, horizontal: 22),
               child: Card(
                 child: Padding(
-                  padding: const EdgeInsets.all(6.0),
-                  child: ListTile(
-                    leading: Icon(
+                    padding: const EdgeInsets.all(0.0),
+                    child: ListTile(
+                      leading: Icon(
                         CupertinoIcons.mail_solid,
                         size: 25,
                         color: Colors.teal,
@@ -91,12 +95,11 @@ class MainApp extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.teal.shade900,
                           fontFamily: "Source Sans 3",
-                          fontSize: 20,
+                          fontSize: 19.5,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                  )
-                ),
+                    )),
               ),
             )
           ],
